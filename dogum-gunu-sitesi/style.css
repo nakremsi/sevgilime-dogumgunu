@@ -1,0 +1,187 @@
+/* Genel Ayarlar */
+body {
+    font-family: 'Montserrat', sans-serif; /* Ana font */
+    background-color: #f5f5f5; /* Çok açık gri (beyaza yakın) arka plan */
+    color: #333333; /* Koyu gri font rengi */
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+/* Başlık Alanı (Header) */
+header {
+    background-color: #212121; /* Koyu Siyah */
+    color: white;
+    padding: 40px 0;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    font-family: 'Dancing Script', cursive; /* Zarif el yazısı font */
+    font-size: 3.5em;
+    margin: 0;
+    color: #ff4081; /* Kalp ve vurgu için canlı kırmızı */
+    text-shadow: 1px 1px #000;
+}
+
+header h2 {
+    font-size: 1.2em;
+    margin-top: 10px;
+    font-weight: 300;
+    color: #bdbdbd; /* Açık gri alt yazı */
+}
+
+/* Bölümler (Sections) */
+section {
+    background-color: white;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+section h3 {
+    color: #ff4081; /* Vurgu kırmızısı */
+    font-size: 1.8em;
+    font-weight: 700;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #e0e0e0; /* Açık gri ayırıcı */
+    padding-bottom: 10px;
+}
+
+/* Şiir Kısmı */
+.poem {
+    font-style: italic;
+    font-size: 1.1em;
+    line-height: 1.8;
+    white-space: pre-line;
+    text-align: left;
+    padding: 15px 30px;
+    border-left: 5px solid #ff4081; /* Kırmızı dikey çizgi */
+    background-color: #fafafa; /* Çok hafif gri arka plan */
+    margin: 20px auto;
+    max-width: 600px;
+    border-radius: 4px;
+}
+
+.poem p {
+    margin: 10px 0;
+}
+
+/* Mesaj Kısmı */
+.message-text {
+    font-size: 1.1em;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* Galeri Kısmı (Fotoğraflar) */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.gallery-img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery-img:hover {
+    transform: scale(1.05);
+    border: 4px solid #ff4081; /* Üzerine gelince kırmızı çerçeve */
+}
+
+/* Alt Kısım (Footer) */
+footer {
+    background-color: #333333; /* Koyu Gri */
+    color: #ffffff;
+    padding: 15px 0;
+    font-size: 0.9em;
+    margin-top: 20px;
+}
+/* Video Galerisi (Kaydırmalı Videolar) */
+.video-section {
+    margin-top: 30px;
+}
+
+.video-section h3 {
+    color: #ff4081;
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 10px;
+}
+
+.video-gallery {
+    display: flex;
+    overflow-x: auto; /* Yana kaydırma */
+    gap: 20px;        /* Videolar arası boşluk */
+    padding-bottom: 10px;
+}
+
+.video-gallery video {
+    min-width: 300px;  /* Video genişliği */
+    max-width: 400px;  /* Maksimum video genişliği */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Kaydırma çubuğunu stilize et (opsiyonel) */
+.video-gallery::-webkit-scrollbar {
+    height: 8px;
+}
+.video-gallery::-webkit-scrollbar-thumb {
+    background-color: #ff4081;
+    border-radius: 4px;
+}
+.video-gallery::-webkit-scrollbar-track {
+    background: #fafafa;
+}
+/* Animasyonlu Kalp */
+.heart {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background: #ff4081;
+    transform: rotate(-45deg);
+    margin: 30px auto; /* Ortala ve üstten boşluk bırak */
+    animation: beat 1s infinite;
+}
+
+.heart::before,
+.heart::after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: #ff4081;
+    border-radius: 50%;
+}
+
+.heart::before {
+    top: -25px;
+    left: 0;
+}
+
+.heart::after {
+    top: 0;
+    left: 25px;
+}
+
+@keyframes beat {
+    0%, 100% { transform: rotate(-45deg) scale(1); }
+    50% { transform: rotate(-45deg) scale(1.2); }
+}

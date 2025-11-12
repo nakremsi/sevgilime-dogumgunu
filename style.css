@@ -1,8 +1,8 @@
 /* Genel Ayarlar */
 body {
     font-family: 'Montserrat', sans-serif; /* Ana font */
-    background-color: #f5f5f5; /* Çok açık gri (beyaza yakın) arka plan */
-    color: #333333; /* Koyu gri font rengi */
+    background-color: #000000; /* Çok açık gri (beyaza yakın) arka plan */
+    color: #000000; /* Koyu gri font rengi */
     margin: 0;
     padding: 0;
     text-align: center;
@@ -16,7 +16,7 @@ body {
 
 /* Başlık Alanı (Header) */
 header {
-    background-color: #212121; /* Koyu Siyah */
+    background-color: #000000; /* Koyu Siyah */
     color: white;
     padding: 40px 0;
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
@@ -47,7 +47,7 @@ section {
 }
 
 section h3 {
-    color: #ff4081; /* Vurgu kırmızısı */
+    color: #800080; /* Vurgu kırmızısı */
     font-size: 1.8em;
     font-weight: 700;
     margin-bottom: 20px;
@@ -101,7 +101,7 @@ section h3 {
 
 .gallery-img:hover {
     transform: scale(1.05);
-    border: 4px solid #ff4081; /* Üzerine gelince kırmızı çerçeve */
+    border: 4px solid #800080; /* Üzerine gelince kırmızı çerçeve */
 }
 
 /* Alt Kısım (Footer) */

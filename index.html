@@ -17,7 +17,7 @@
     <div class="container">
 
         <section class="poetry-section">
-            <h3>Şevvale❤️</h3>
+            <h3>Şevvalime❤️</h3>
             <div class="poem">
                 <p>
                     Gitme, istemem senden başka bir lavanta
@@ -81,40 +81,66 @@ Sevgilin,
   
 ERKAN
             </p>
-        </section>
 <section class="gallery-section">
-            <h3>Aşkım Bak Bu Da Biz</h3>
-            <div class="gallery">
-                <img src="foto1.jpg" class="gallery-img">
-                <img src="foto2.jpg" alt="bu da biz" class="gallery-img">
-                <img src="foto3.jpg" alt="En sevdiğim fotoğraf" class="gallery-img">
-            </div>
-        <section class="video-section">
-    <h3>Bu Çok iyi ALASKDAKJSDAK</h3>
-    <div class="video-gallery">
-        <video controls>
-            <source src="video/video1.mp4" type="video/mp4">
-            Tarayıcınız video etiketini desteklemiyor.
-        </video>
+    <h3>Aşkım Aşağıdaki Butona Tıkla ↓</h3>
+
+    <!-- Fotoğrafları Göster Butonu -->
+    <button id="toggleGallery" class="gallery-btn">Fotoğrafları Göster 💜</button>
+
+    <!-- 🦝 Rakun Fotoğrafı (her zaman görünür) -->
+    <div class="raccoon-container">
+        <img src="raccoon.jpg" alt="BU DA SEN" class="raccoon-img">
     </div>
+
+    <!-- 🎵 Müzik Bölümü -->
+    <section class="music-section">
+        <h3>Bu Şarkı Senin İçin 🎶</h3>
+        <audio controls class="music-player">
+            <source src="sarki.mp3" type="audio/mpeg">
+            Tarayıcınız bu müzik formatını desteklemiyor.
+        </audio>
+    </section>
+
+    <!-- 📸 Fotoğraflar -->
+    <div class="gallery" id="photoGallery">
+        <img src="foto1.jpg" class="gallery-img">
+        <img src="foto2.jpg" class="gallery-img">
+        <img src="foto3.jpg" class="gallery-img">
+    </div>
+
+<!-- 📹 Video Bölümü (fotoğraflardan hemen sonra) -->
+<section class="video-section">
+    <h3>Komik Videomuz 🎬</h3>
+    <video controls class="video-player">
+        <source src="video.mp4" type="video/mp4">
+        Tarayıcınız video etiketini desteklemiyor.
+    </video>
 </section>
 
+<!-- JavaScript (en altta, </body>’den hemen önce) -->
+<script>
+    const toggleBtn = document.getElementById('toggleGallery');
+    const gallery = document.getElementById('photoGallery');
+    let isVisible = false;
 
-    </div>
+    gallery.style.display = "none"; // Başta gizli
 
-    <footer>
-        <p>❤ 2025 Senin Adın. Sonsuza Dek Benimsin. ❤</p>
-    </footer>
-
-</body>
-</html>
-
-
-    </div>
-
-    <footer>
-        <p>❤️ 2025 Senin Adın. Sonsuza Dek Benimsin. ❤️</p>
-    </footer>
-
-</body>
-</html>
+    toggleBtn.addEventListener('click', () => {
+        isVisible = !isVisible;
+        if (isVisible) {
+            gallery.style.display = "flex";
+            gallery.style.opacity = "0";
+            setTimeout(() => {
+                gallery.style.transition = "opacity 0.8s ease";
+                gallery.style.opacity = "1";
+            }, 10);
+            toggleBtn.textContent = "SENİ SEVİYORUM 💜";
+        } else {
+            gallery.style.opacity = "0";
+            setTimeout(() => {
+                gallery.style.display = "none";
+            }, 500);
+            toggleBtn.textContent = "Bunu Neden Koyduğumu Sorgulama";
+        }
+    });
+</script>

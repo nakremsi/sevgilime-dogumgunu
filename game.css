@@ -1,0 +1,30 @@
+/* Rakun Oyun Alanı Stilleri */
+.raccoon-game-section {
+    text-align: center;
+    padding: 30px;
+}
+
+#gameCanvas {
+    background-color: #e0e0e0; /* Açık gri zemin */
+    border: 3px solid #333; /* Koyu tema ile uyumlu çerçeve */
+    border-radius: 8px;
+    margin: 20px auto;
+    display: block; /* Ortalamak için */
+    cursor: pointer; /* Oyunu başlatmak için tıklanabilir olduğunu belirtir */
+}
+
+.score-board {
+    display: flex;
+    justify-content: space-between; /* Skorları yanlara ayırır */
+    max-width: 600px;
+    margin: 0 auto 10px auto;
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #ff4081; /* Vurgu rengi */
+}
+
+.game-info {
+    color: #777;
+    font-size: 0.9em;
+    margin-top: 5px;
+}

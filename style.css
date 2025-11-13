@@ -1,4 +1,3 @@
-/* Genel Ayarlar */
 body {
     font-family: 'Montserrat', sans-serif; /* Ana font */
     background-color: #000000; /* Çok açık gri (beyaza yakın) arka plan */
@@ -280,4 +279,41 @@ footer {
     max-width: 500px;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+} 
+
+/* --- RAKUN OYUNU STİLLERİ EKLENDİ (ÖNCEKİ game.css'TEN TAŞINDI) --- */
+.raccoon-game-section {
+    /* Bu bölüm 'section' stili ile aynıdır (beyaz arka plan, gölge) */
+    text-align: center;
+    padding: 30px;
+}
+
+.raccoon-game-section h3 {
+    /* Başlık rengini koru */
+    color: #800080; 
+}
+
+#gameCanvas {
+    background-color: #e0e0e0; /* Açık gri zemin (Oyun Alanı) */
+    border: 3px solid #333; /* Koyu çerçeve */
+    border-radius: 8px;
+    margin: 20px auto;
+    display: block; 
+    cursor: pointer;
+}
+
+.score-board {
+    display: flex;
+    justify-content: space-between; 
+    max-width: 600px;
+    margin: 0 auto 10px auto;
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #ff4081; /* Vurgu rengi: Canlı Kırmızı/Pembe */
+}
+
+.game-info {
+    color: #777; /* Açıklama yazısı için gri */
+    font-size: 0.9em;
+    margin-top: 5px;
 }
